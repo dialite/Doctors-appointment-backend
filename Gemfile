@@ -5,6 +5,7 @@ ruby '3.2.0'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin possible
 gem 'rack-cors'
 
 # Gem devise for user authentication
