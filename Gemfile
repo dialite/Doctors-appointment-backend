@@ -6,7 +6,7 @@ ruby '3.2.0'
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 # for secure password hashing and authentication
-gem "bcrypt", "~> 3.1.7"
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin possible
 gem 'rack-cors'
