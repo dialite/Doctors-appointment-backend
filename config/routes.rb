@@ -4,10 +4,13 @@ Rails.application.routes.draw do
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
+  post '/auth/login', to: 'authentication#login'
+
   namespace :api do
     namespace :v1 do
       resources :users
-      resources :doctors
+      resources :doctors, only: %i[index show create destroy]
+      post '/auth/signup', to: 'users#create'
     end
   end
 
