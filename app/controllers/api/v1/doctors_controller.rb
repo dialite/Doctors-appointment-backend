@@ -1,6 +1,6 @@
 class Api::V1::DoctorsController < ApplicationController
-  before_action :authorize_request, only: %i[create, update, destroy]
-  before_action :set_doctor, only: %i[ show edit update destroy ]
+  before_action :authorize_request, only: %i[create update destroy]
+  before_action :set_doctor, only: %i[show edit update destroy]
 
   # GET /doctors.json
   def index
@@ -19,8 +19,7 @@ class Api::V1::DoctorsController < ApplicationController
   end
 
   # GET /doctors/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /doctors.json
   def create
@@ -56,13 +55,14 @@ class Api::V1::DoctorsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_doctor
-      @doctor = Doctor.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def doctor_params
-      params.require(:doctor).permit(:name, :specialty, :photo)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_doctor
+    @doctor = Doctor.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def doctor_params
+    params.require(:doctor).permit(:name, :specialty, :photo)
+  end
 end
