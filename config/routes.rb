@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Rswag::Api::Engine => '/api-docs'
   resources :appointments
   resources :doctors
   devise_for :users
