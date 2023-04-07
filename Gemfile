@@ -14,6 +14,9 @@ gem 'rack-cors'
 # Gem devise for user authentication
 gem 'devise'
 
+# gen cancancan for authorization
+gem 'cancancan'
+
 # Add jwt for token based authentication
 gem 'jwt'
 
