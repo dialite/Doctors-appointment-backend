@@ -25,12 +25,13 @@ class Api::V1::DoctorsController < ApplicationController
   def create
     @doctor = Doctor.new(doctor_params)
 
-    respond_to do |format|
-      if @doctor.save
-        format.json { render :show, status: :created, location: @doctor }
-      else
-        format.json { render json: @doctor.errors, status: :unprocessable_entity }
-      end
+    if current_user.role == 'admin'
+      @doctor.save
+      render json: @doctor, status: :created
+    elsif current_user.role != 'admin'
+      render json: { message: 'Access for only Admins' }
+    else
+      render json: @doctor.errors, status: :unprocessable_entity
     end
   end
 
@@ -52,6 +53,7 @@ class Api::V1::DoctorsController < ApplicationController
     respond_to do |format|
       format.json { head :no_content }
     end
+    render json: Doctor.all
   end
 
   private
