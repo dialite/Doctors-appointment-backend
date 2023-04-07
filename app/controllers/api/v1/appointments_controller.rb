@@ -5,10 +5,12 @@ class AppointmentsController < ApplicationController
   # GET /appointments or /appointments.json
   def index
     @appointments = Appointment.all
+    render json: @appointments
   end
 
   # GET /appointments/1 or /appointments/1.json
   def show
+    render json: @appointment
   end
 
   # GET /appointments/new
@@ -61,6 +63,7 @@ class AppointmentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def appointment_params
-      params.fetch(:appointment, {})
+      params.fetch(:appointment).permit(:appointment_date, :appointment_time, :user_id, :doctor_id,
+        :description)
     end
 end
