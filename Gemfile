@@ -5,6 +5,9 @@ ruby '3.2.0'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+# RSWAG is used for api documentation
+gem 'rswag'
+
 # Secures password hashing and authentication
 gem 'bcrypt', '~> 3.1.7'
 
