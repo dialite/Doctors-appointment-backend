@@ -4,13 +4,14 @@ class Api::V1::AppointmentsController < ApplicationController
 
   # GET /appointments or /appointments.json
   def index
-    @appointments = Appointment.all
-    render json: @appointments
+    @appointments = Doctor.find(params[:doctor_id]).appointments.all
+    render json: @appointments, status: 200
   end
 
   # GET /appointments/1 or /appointments/1.json
   def show
-    render json: @appointment
+    @appointment = Appointment.find(params[:id])
+    render json: @appointment, status: 200
   end
 
   # GET /appointments/new
@@ -23,7 +24,7 @@ class Api::V1::AppointmentsController < ApplicationController
 
   # POST /appointments or /appointments.json
   def create
-    @appointment = Appointment.new(appointment_params)
+    @appointment = @current_user.appointments.new(appointment_params)
 
     respond_to do |format|
       if @appointment.save
@@ -47,10 +48,11 @@ class Api::V1::AppointmentsController < ApplicationController
 
   # DELETE /appointments/1 or /appointments/1.json
   def destroy
-    @appointment.destroy
-
-    respond_to do |format|
-      format.json { head :no_content }
+    @appointment = Appointment.find(params[:id])
+    if @appointment.destroy
+      render json: { message: 'Appointment has been successfully deleted' }
+    else
+      render json: @appointment.errors, status: :unprocessable_entity
     end
   end
 
@@ -63,7 +65,7 @@ class Api::V1::AppointmentsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def appointment_params
-    params.fetch(:appointment).permit(:appointment_date, :appointment_time, :user_id, :doctor_id,
+    params.fetch(:appointment).permit(:appointment_date, :appointment_time, :doctor_id,
                                       :description)
   end
 end
