@@ -1,7 +1,12 @@
 class Api::V1::UsersController < ApplicationController
+  before_action :set_user, only: %i[show update destroy]
+  before_action :authorize_request, only: %i[appointments]
+
   # GET /users.json
   def index
-    render json: User.all
+    @users = User.all
+
+    render json: @users
   end
 
   # GET /users/1.json
@@ -32,6 +37,16 @@ class Api::V1::UsersController < ApplicationController
   # DELETE /users/1
   def destroy
     @user.destroy
+    @users = User.all
+    render json: @users
+  end
+
+   # GET /users/1/appointments
+  def appointments
+    @appointments = Appointment.includes(:doctor, :user)
+                              .where(user_id: current_user.id)
+                              .select('appointments.*, doctors.name AS doctor_name, doctors.speciality AS doctors_specialization')
+    render json: { user: current_user, appointments: @appointments }
   end
 
   private
