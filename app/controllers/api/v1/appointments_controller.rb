@@ -5,13 +5,13 @@ class Api::V1::AppointmentsController < ApplicationController
   # GET /appointments.json
   def index
     @appointments = Doctor.find(params[:doctor_id]).appointments.all
-    render json: @appointments, status: 200
+    render json: @appointments, status: ok
   end
 
   # GET /appointments/1.json
   def show
     @appointment = Appointment.find(params[:id])
-    render json: @appointment, status: 200
+    render json: @appointment, status: ok
   end
 
   # GET /appointments/new
@@ -45,7 +45,7 @@ class Api::V1::AppointmentsController < ApplicationController
   # DELETE /appointments/1.json
   def destroy
     @current_user.appointments.destroy(params[:id])
-    render json: @current_user.appointments.all
+    render json: @current_user.appointments.all, status: ok
   end
 
   private
