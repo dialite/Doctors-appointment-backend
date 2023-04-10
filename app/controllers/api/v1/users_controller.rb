@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   before_action :set_user, only: %i[show update destroy]
-  before_action :authorize_request, only: %i[appointments]
+  # before_action :authorize_request, only: %i[appointments]
 
   # GET /users.json
   def index
