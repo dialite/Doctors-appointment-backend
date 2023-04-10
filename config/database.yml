@@ -87,7 +87,4 @@ test:
 #
 production:
   <<: *default
-  database: doctors_appointment_production
-  username: postgres
-  password: anieray01
-  host: localhost
+  url: <%= ENV['DATABASE_URL'] %>

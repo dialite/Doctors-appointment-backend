@@ -1,0 +1,18 @@
+databases:
+  - name: doctor
+    databaseName: doctor_aepv
+    user: doctor_aepv_user
+
+services:
+  - type: web
+    name: doctorapp
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: doctor
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
