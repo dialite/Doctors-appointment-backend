@@ -41,11 +41,11 @@ class Api::V1::UsersController < ApplicationController
     render json: @users
   end
 
-   # GET /users/1/appointments
+  # GET /users/1/appointments
   def appointments
     @appointments = Appointment.includes(:doctor, :user)
-                              .where(user_id: current_user.id)
-                              .select('appointments.*, doctors.name AS doctor_name, doctors.speciality AS doctors_specialization')
+      .where(user_id: current_user.id)
+      .select('appointments.*, doctors.name AS doctor_name, doctors.speciality AS doctors_specialization')
     render json: { user: current_user, appointments: @appointments }
   end
 
