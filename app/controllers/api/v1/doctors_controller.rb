@@ -50,9 +50,9 @@ class Api::V1::DoctorsController < ApplicationController
   def destroy
     @doctor.destroy
 
-    respond_to do |format|
-      format.json { head :no_content }
-    end
+    # respond_to do |format|
+    #   format.json { head :no_content }
+    # end
     render json: Doctor.all
   end
 
@@ -65,6 +65,6 @@ class Api::V1::DoctorsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def doctor_params
-    params.require(:doctor).permit(:name, :specialty, :photo)
+    params.require(:doctor).permit(:name, :lastname, :specialty, :image, :experience, :consultation)
   end
 end

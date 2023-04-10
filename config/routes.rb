@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   mount Rswag::Api::Engine => '/api-docs'
   resources :appointments
   resources :doctors
-  devise_for :users
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -12,6 +11,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users
+      get '/patient/appointments', to: 'users#appointments'
       resources :doctors, only: %i[index show create destroy] do
         resources :appointments, only: %i[index show create destroy]
       end
