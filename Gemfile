@@ -8,20 +8,11 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 # RSWAG is used for api documentation
 gem 'rswag'
 
-# Secures password hashing and authentication
-gem 'bcrypt', '~> 3.1.7'
-
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin possible
 gem 'rack-cors'
 
-# Gem devise for user authentication
-gem 'devise'
-
 # gen cancancan for authorization
 gem 'cancancan'
-
-# Add jwt for token based authentication
-gem 'jwt'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
