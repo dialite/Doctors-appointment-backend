@@ -6,7 +6,7 @@ class Api::V1::AppointmentsController < ApplicationController
 
   # GET /appointments.json
   def index
-    @appointments = Doctor.find(params[:doctor_id]).appointments.all
+    @appointments = Appointments.all
     render json: @appointments, status: ok
   end
 
