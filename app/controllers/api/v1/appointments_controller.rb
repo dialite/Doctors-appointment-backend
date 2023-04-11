@@ -7,13 +7,13 @@ class Api::V1::AppointmentsController < ApplicationController
   # GET /appointments.json
   def index
     @appointments = Appointment.all
-    render json: @appointments, status: ok
+    render json: @appointments
   end
 
   # GET /appointments/1.json
   def show
     @appointment = Appointment.find(params[:id])
-    render json: @appointment, status: ok
+    render json: @appointment
   end
 
   # GET /appointments/new
