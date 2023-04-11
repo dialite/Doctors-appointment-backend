@@ -29,7 +29,7 @@ This is a backend web application for booking doctor appointments.
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Server's</summary>
+  <summary>Server</summary>
   <ul>
     <li><a href="https://rubyonrails.org/">ROR</a></li>
   </ul>
