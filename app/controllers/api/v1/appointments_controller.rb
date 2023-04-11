@@ -1,6 +1,8 @@
 class Api::V1::AppointmentsController < ApplicationController
   # before_action :authorize_request, only: %i[create update destroy]
   before_action :set_appointment, only: %i[show edit update destroy]
+  # Skip CSRF protection for all actions in this controller
+  skip_before_action :verify_authenticity_token
 
   # GET /appointments.json
   def index
@@ -57,6 +59,6 @@ class Api::V1::AppointmentsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def appointment_params
-    params.fetch(:appointment).permit(:city, :doctor_id, :datetime)
+    params.fetch(:appointment).permit(:city, :doctor_id, :datetime, :user_id)
   end
 end

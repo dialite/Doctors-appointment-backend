@@ -12,9 +12,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users
       get '/patient/appointments', to: 'users#appointments'
-      resources :doctors, only: %i[index show create destroy] do
-        resources :appointments, only: %i[index show create destroy]
-      end
+      resources :doctors, only: %i[index show create destroy]
+      resources :appointments, only: %i[index show create destroy]
       # post '/auth/signup', to: 'users#create'
     end
   end
