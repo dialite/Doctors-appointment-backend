@@ -1,6 +1,8 @@
 class Api::V1::DoctorsController < ApplicationController
-  before_action :authorize_request, only: %i[create update destroy]
   before_action :set_doctor, only: %i[show edit update destroy]
+  # before_action :authorize_request, only: %i[create update destroy]
+  # Skip CSRF protection for all actions in this controller
+  skip_before_action :verify_authenticity_token
 
   # GET /doctors.json
   def index
@@ -25,11 +27,8 @@ class Api::V1::DoctorsController < ApplicationController
   def create
     @doctor = Doctor.new(doctor_params)
 
-    if current_user.role == 'admin'
-      @doctor.save
+    if @doctor.save
       render json: @doctor, status: :created
-    elsif current_user.role != 'admin'
-      render json: { message: 'Access for only Admins' }
     else
       render json: @doctor.errors, status: :unprocessable_entity
     end
@@ -65,6 +64,6 @@ class Api::V1::DoctorsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def doctor_params
-    params.require(:doctor).permit(:name, :lastname, :specialty, :image, :experience, :consultation)
+    params.require(:doctor).permit(:name, :lastname, :speciality, :image, :experience, :consultation)
   end
 end
