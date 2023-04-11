@@ -46,8 +46,12 @@ class Api::V1::AppointmentsController < ApplicationController
 
   # DELETE /appointments/1.json
   def destroy
-    @current_user.appointments.destroy(params[:id])
-    render json: @current_user.appointments.all, status: ok
+    @appointment.destroy
+
+    # respond_to do |format|
+    #   format.json { head :no_content }
+    # end
+    render json: Appointment.all
   end
 
   private
