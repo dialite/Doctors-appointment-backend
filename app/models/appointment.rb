@@ -10,12 +10,12 @@ class Appointment < ApplicationRecord
 
   # Define a getter method for "doctor" attribute
   def doctor
-    Doctor.find_by(id: self.doctor_id)&.name
+    Doctor.find_by(id: doctor_id)&.name
   end
 
   # Define a setter method for "doctor" attribute
   def doctor=(name)
-    doctor = Doctor.find_or_create_by(name: name)
+    doctor = Doctor.find_or_create_by(name:)
     self.doctor_id = doctor.id
   end
 end
