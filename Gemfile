@@ -12,7 +12,7 @@ gem 'rswag'
 gem 'rack-cors'
 
 # gen cancancan for authorization
-# gem 'cancancan'
+gem 'cancancan'
 
 # Add jwt for token based authentication
 # gem 'jwt'
