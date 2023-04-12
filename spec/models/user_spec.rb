@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
   before { subject.save }
 
   context 'Test for validation : ' do
-    it 'Name should be valid' do
+    it 'Username should be valid' do
       expect(subject).to be_valid
     end
 
