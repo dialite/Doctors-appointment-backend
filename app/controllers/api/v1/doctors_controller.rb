@@ -36,12 +36,10 @@ class Api::V1::DoctorsController < ApplicationController
 
   # PATCH/PUT /doctors/1.json
   def update
-    respond_to do |format|
-      if @doctor.update(doctor_params)
-        format.json { render :show, status: :ok, location: @doctor }
-      else
-        format.json { render json: @doctor.errors, status: :unprocessable_entity }
-      end
+    if @doctor.update(doctor_params)
+      render json: @doctor
+    else
+      render json: @doctor.errors, status: :unprocessable_entity
     end
   end
 
