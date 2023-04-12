@@ -5,6 +5,8 @@ ruby '3.2.0'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+gem 'rspec-rails'
+
 # RSWAG is used for api documentation
 gem 'rswag'
 
