@@ -13,7 +13,8 @@ RSpec.describe 'Appointments', type: %w[request feature] do
     @doctor = Doctor.all.last
 
     post '/api/v1/appointments',
-         params: { appointment: { user: @user.id, doctor: @doctor.id, datetime: '2023-04-10T12:00:00.000Z', city: 'New-York' } },
+         params: { appointment: { user: @user.id, doctor: @doctor.id, datetime: '2023-04-10T12:00:00.000Z',
+                                  city: 'New-York' } },
          headers: { Authorization: @token }
 
     @appointment = Appointment.all.last

@@ -25,7 +25,7 @@ RSpec.describe 'Doctors', type: %w[request feature] do
     expect(JSON.parse(response.body)['lastname']).to eq('Olisa')
     expect(JSON.parse(response.body)['speciality']).to eq('Surgeon')
     expect(JSON.parse(response.body)['experience']).to eq(10)
-    expect(JSON.parse(response.body)['consultation'].to_f).to eq(200.0)   
+    expect(JSON.parse(response.body)['consultation'].to_f).to eq(200.0)
   end
 
   it 'updates a doctor' do
