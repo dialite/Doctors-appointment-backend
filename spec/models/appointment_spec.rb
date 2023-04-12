@@ -6,7 +6,7 @@ RSpec.describe Appointment, type: :model do
                          experience: 10, consultation: 200, image: 'https://doctorphoto.com/profile.png')
 
   subject do
-    Appointment.new(user: user, doctor: doctor, datetime: '2023-04-10T12:00:00.000Z', city: 'New-York')
+    Appointment.new(user:, doctor:, datetime: '2023-04-10T12:00:00.000Z', city: 'New-York')
   end
 
   before { subject.save }
