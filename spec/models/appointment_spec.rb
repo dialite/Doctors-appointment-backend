@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe Appointment, type: :model do
   user = User.create(username: 'Boaz')
   doctor = Doctor.create(name: 'Raymond', lastname: 'Olisa', speciality: 'Surgeon',
-      experience: 10, consultation: 200, image: 'https://doctorphoto.com/profile.png')
+                         experience: 10, consultation: 200, image: 'https://doctorphoto.com/profile.png')
 
   subject do
-    Appointment.new(user: user, doctor: doctor, datetime: '2023-04-10T12:00:00.000Z', city: 'New-York')
+    Appointment.new(user:, doctor:, datetime: '2023-04-10T12:00:00.000Z', city: 'New-York')
   end
 
   before { subject.save }

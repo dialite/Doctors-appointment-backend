@@ -4,7 +4,7 @@ RSpec.describe Doctor, type: :model do
   subject do
     user = User.create(username: 'Boaz')
     Doctor.new(name: 'Raymond', lastname: 'Olisa', speciality: 'Surgeon',
-      experience: 10, consultation: 200, image: 'https://doctorphoto.com/profile.png')
+               experience: 10, consultation: 200, image: 'https://doctorphoto.com/profile.png')
   end
 
   before { subject.save }
