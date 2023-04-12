@@ -7,6 +7,12 @@ RSpec.describe 'Users', type: %w[request feature] do
     @user = User.all.last
   end
 
+  it 'renders the users list' do
+    get '/api/v1/users/'
+    expect(response.status).to eq(200)
+    expect(JSON.parse(response.body).size).to eq(User.count)
+  end
+
   it 'renders the requested user' do
     get "/api/v1/users/#{@user.id}"
     expect(response.status).to eq(200)
