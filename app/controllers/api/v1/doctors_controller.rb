@@ -34,7 +34,7 @@ class Api::V1::DoctorsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /doctors/1.json
+   # PATCH/PUT /doctors/1.json
   def update
     if @doctor.update(doctor_params)
       render json: @doctor
@@ -62,6 +62,6 @@ class Api::V1::DoctorsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def doctor_params
-    params.require(:doctor).permit(:name, :lastname, :speciality, :experience, :consultation, :image)
+    params.require(:doctor).permit(:name, :lastname, :speciality, :image, :experience, :consultation)
   end
 end
