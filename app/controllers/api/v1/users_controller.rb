@@ -1,7 +1,5 @@
 class Api::V1::UsersController < ApplicationController
   before_action :set_user, only: %i[show update destroy]
-  # before_action :authorize_request, only: %i[appointments]
-  # Skip CSRF protection for all actions in this controller
   skip_before_action :verify_authenticity_token
 
   # GET /users.json
