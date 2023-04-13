@@ -22,16 +22,37 @@
 
 # Doctors-appointment-backend <a name="hello-rails-react"></a>
 
-This is a backend web application for booking doctor appointments.
+This web application is the API that serves as the backend to the [ Doctors-appointment-frontend](https://github.com/dialite/Doctors-appointment-frontend)
+Also, it's used for booking doctor appointments.
 
-Backend:
+## Front-end Repository
+| Repository | Pull request |
+|------------|------------|
+|[Repo link >>](https://github.com/dialite/Doctors-appointment-frontend)|[Pull request Here >>](https://github.com/dialite/Doctors-appointment-frontend/pull/10)|
 
-- URL users: https://doctor-t64q.onrender.com/api/v1/users
-- URL doctors: https://doctor-t64q.onrender.com/api/v1/doctors
-- URL appointments: https://doctor-t64q.onrender.com/api/v1/appointments
+## Team members: @dialite, @Aduda-Boaz, @storres20
 
-Frontend:
-URL: https://doctorsfinal.netlify.app/
+## Backend API routes
+| Route | URL |
+|------------|------------|
+|/users|https://doctor-t64q.onrender.com/api/v1/users|
+|/doctors|https://doctor-t64q.onrender.com/api/v1/doctors|
+|/appointments|https://doctor-t64q.onrender.com/api/v1/appointments|
+
+![backapi](https://user-images.githubusercontent.com/81504385/231864037-c68e528f-67da-4783-b313-f0e243fd5232.jpeg)
+
+
+## Frontend
+| URL |
+|------------|
+|https://doctorsfinal.netlify.app/|
+
+## Kanban Board
+| URL |
+|------------|
+|https://github.com/users/dialite/projects/10/views/1|
+
+![Captura de pantalla de 2023-04-13 14-31-58](https://user-images.githubusercontent.com/81504385/231864497-891f7ada-b648-4482-a7a7-177da8910313.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -161,6 +182,10 @@ If you like this project and want to support me make cooler projects Give this p
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank Microverse community.
+
+Original idea by [Murat Korkmaz](https://www.behance.net/muratk).
+
+Original design [Vespa-Responsive-Redesign](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
