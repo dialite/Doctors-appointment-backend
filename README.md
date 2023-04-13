@@ -122,7 +122,7 @@ Install the project dependencies with:
 To setup the database on your local machine run the following code commands below
 
 ```
-   rails db:setup
+   rails db:create
 ```
 
 ```
