@@ -7,6 +7,7 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 # RSWAG is used for api documentation
 gem 'rswag'
+gem 'rswag-ui'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin possible
 gem 'rack-cors'
