@@ -1,7 +1,5 @@
 class Api::V1::AppointmentsController < ApplicationController
   before_action :set_appointment, only: %i[show edit update destroy]
-  # before_action :authorize_request, only: %i[create update destroy]
-  # Skip CSRF protection for all actions in this controller
   skip_before_action :verify_authenticity_token
 
   # GET /appointments.json
@@ -47,10 +45,6 @@ class Api::V1::AppointmentsController < ApplicationController
   # DELETE /appointments/1.json
   def destroy
     @appointment.destroy
-
-    # respond_to do |format|
-    #   format.json { head :no_content }
-    # end
     render json: Appointment.all
   end
 
