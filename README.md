@@ -23,6 +23,14 @@
 # Doctors-appointment-backend <a name="hello-rails-react"></a>
 This is a backend web application for booking doctor appointments.
 
+Backend:
+URL users: https://doctor-t64q.onrender.com/api/v1/users
+URL doctors: https://doctor-t64q.onrender.com/api/v1/doctors
+URL appointments: https://doctor-t64q.onrender.com/api/v1/appointments
+
+Frontend:
+URL: https://doctorsfinal.netlify.app/
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
