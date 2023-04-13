@@ -32,7 +32,7 @@ class Api::V1::DoctorsController < ApplicationController
     end
   end
 
-   # PATCH/PUT /doctors/1.json
+  # PATCH/PUT /doctors/1.json
   def update
     if @doctor.update(doctor_params)
       render json: @doctor
