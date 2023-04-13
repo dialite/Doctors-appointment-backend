@@ -21,12 +21,14 @@
   - [📝 License ](#-license-)
 
 # Doctors-appointment-backend <a name="hello-rails-react"></a>
+
 This is a backend web application for booking doctor appointments.
 
 Backend:
-URL users: https://doctor-t64q.onrender.com/api/v1/users
-URL doctors: https://doctor-t64q.onrender.com/api/v1/doctors
-URL appointments: https://doctor-t64q.onrender.com/api/v1/appointments
+
+- URL users: https://doctor-t64q.onrender.com/api/v1/users
+- URL doctors: https://doctor-t64q.onrender.com/api/v1/doctors
+- URL appointments: https://doctor-t64q.onrender.com/api/v1/appointments
 
 Frontend:
 URL: https://doctorsfinal.netlify.app/
@@ -120,6 +122,7 @@ rspec
 - LinkedIn: [Raymond Olisa](https://www.linkedin.com/in/raymond-olisa-775929243/)
 
 👤 **Boaz Aduda**
+
 - GitHub: [@Aduda-Boaz](https://github.com/Aduda-Boaz)
 - Twitter: [@BoazAduda](https://twitter.com/BoazAduda)
 - LinkedIn: [Boaz Aduda](https://www.linkedin.com/in/boaz-aduda/)
