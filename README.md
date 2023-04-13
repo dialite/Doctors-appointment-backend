@@ -4,6 +4,11 @@
 
 - [📗 Table of Contents](#-table-of-contents)
 - [Doctors-appointment-backend ](#doctors-appointment-backend-)
+  - [Front-end Repository](#front-end-repository)
+  - [Team members: @dialite, @Aduda-Boaz, @storres20](#team-members-dialite-aduda-boaz-storres20)
+  - [Backend API routes](#backend-api-routes)
+  - [Frontend](#frontend)
+  - [Kanban Board](#kanban-board)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -11,6 +16,7 @@
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
+    - [Database Setup](#database-setup)
     - [Usage ](#usage-)
     - [Run tests](#run-tests)
   - [👥 Author ](#-author-)
@@ -26,31 +32,34 @@ This web application is the API that serves as the backend to the [ Doctors-appo
 Also, it's used for booking doctor appointments.
 
 ## Front-end Repository
-| Repository | Pull request |
-|------------|------------|
-|[Repo link >>](https://github.com/dialite/Doctors-appointment-frontend)|[Pull request Here >>](https://github.com/dialite/Doctors-appointment-frontend/pull/10)|
+
+| Repository                                                              | Pull request                                                                            |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| [Repo link >>](https://github.com/dialite/Doctors-appointment-frontend) | [Pull request Here >>](https://github.com/dialite/Doctors-appointment-frontend/pull/10) |
 
 ## Team members: @dialite, @Aduda-Boaz, @storres20
 
 ## Backend API routes
-| Route | URL |
-|------------|------------|
-|/users|https://doctor-t64q.onrender.com/api/v1/users|
-|/doctors|https://doctor-t64q.onrender.com/api/v1/doctors|
-|/appointments|https://doctor-t64q.onrender.com/api/v1/appointments|
+
+| Route         | URL                                                  |
+| ------------- | ---------------------------------------------------- |
+| /users        | https://doctor-t64q.onrender.com/api/v1/users        |
+| /doctors      | https://doctor-t64q.onrender.com/api/v1/doctors      |
+| /appointments | https://doctor-t64q.onrender.com/api/v1/appointments |
 
 ![backapi](https://user-images.githubusercontent.com/81504385/231864037-c68e528f-67da-4783-b313-f0e243fd5232.jpeg)
 
-
 ## Frontend
-| URL |
-|------------|
-|https://doctorsfinal.netlify.app/|
+
+| URL                               |
+| --------------------------------- |
+| https://doctorsfinal.netlify.app/ |
 
 ## Kanban Board
-| URL |
-|------------|
-|https://github.com/users/dialite/projects/10/views/1|
+
+| URL                                                  |
+| ---------------------------------------------------- |
+| https://github.com/users/dialite/projects/10/views/1 |
 
 ![Captura de pantalla de 2023-04-13 14-31-58](https://user-images.githubusercontent.com/81504385/231864497-891f7ada-b648-4482-a7a7-177da8910313.png)
 
@@ -105,7 +114,23 @@ Clone this repository to your desired folder:
 Install the project dependencies with:
 
 ```
-  - bundle install
+  bundle install
+```
+
+### Database Setup
+
+To setup the database on your local machine run the following code commands below
+
+```
+   rails db:setup
+```
+
+```
+   rails db:migrate
+```
+
+```
+   rails db:seed
 ```
 
 ### Usage <a name="usage"></a>
@@ -121,7 +146,14 @@ To run the project, execute the following command:
 To run tests, run the following command:
 
 ```
-rspec
+  rspec
+```
+
+To run tests, run the following command:
+
+```
+  Rubocop --color
+  Rubocop -a
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
