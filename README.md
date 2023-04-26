@@ -7,8 +7,11 @@
   - [Front-end Repository](#front-end-repository)
   - [Team members: @dialite, @Aduda-Boaz, @storres20](#team-members-dialite-aduda-boaz-storres20)
   - [Backend API routes](#backend-api-routes)
+    - [`API Documentation`](#api-documentation)
   - [Frontend](#frontend)
   - [Kanban Board](#kanban-board)
+    - [`Initial state of Kanban board`](#initial-state-of-kanban-board)
+    - [`Final state of Kanban board`](#final-state-of-kanban-board)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -47,6 +50,8 @@ Also, it's used for booking doctor appointments.
 | /doctors      | https://doctor-t64q.onrender.com/api/v1/doctors      |
 | /appointments | https://doctor-t64q.onrender.com/api/v1/appointments |
 
+### `API Documentation`
+
 ![backapi](https://user-images.githubusercontent.com/81504385/231864037-c68e528f-67da-4783-b313-f0e243fd5232.jpeg)
 
 ## Frontend
@@ -62,9 +67,11 @@ Also, it's used for booking doctor appointments.
 | https://github.com/users/dialite/projects/10/views/1 |
 
 ### `Initial state of Kanban board`
+
 ![screenshot](https://user-images.githubusercontent.com/69727214/229170388-4bf5ba50-58fb-43af-93e6-428f0ce275ff.PNG)
 
 ### `Final state of Kanban board`
+
 ![Captura de pantalla de 2023-04-13 14-31-58](https://user-images.githubusercontent.com/81504385/231864497-891f7ada-b648-4482-a7a7-177da8910313.png)
 
 `Final Number of Team members:` 03
